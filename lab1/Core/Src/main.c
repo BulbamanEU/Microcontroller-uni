@@ -92,6 +92,7 @@ int main(void)
   uint32_t last_tick_red = 0;
   uint32_t last_tick_green = 0;
   uint32_t set_tick_speed = 1000;
+  uint8_t button_was_pressed = 0; // Pagalbinis kintamasis paspaudimui fiksuoti
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -160,11 +161,15 @@ int main(void)
 	  		{
 	  		  /* set green LED on */
 			  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_SET);
-			  set_tick_speed = set_tick_speed + 500;
+			  if(button_was_pressed == 0){
+				  set_tick_speed = set_tick_speed + 500;
+				  button_was_pressed = 1; // uzrakinama galimybe keisti dazni
+			  }
 	  		}
 		  else
 	  		{
 	  		  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_RESET);
+	  		button_was_pressed = 0; // atrakinama galimybe keisti dazni
 	  		}
 	  }
 
