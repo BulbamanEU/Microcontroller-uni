@@ -42,7 +42,14 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+/* --- Globalūs kintamieji --- */
+volatile uint32_t my_ms_ticks = 0; // Mūsų nuosavas milisekundžių skaitiklis
 
+/* --- SysTick pertraukties funkcija --- */
+/* Ši funkcija iškviečiama automatiškai kas 1ms, nes ją sukonfigūruoja sistema paleidimo metu */
+void SysTick_Handler(void) {
+    my_ms_ticks++;
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -97,6 +104,7 @@ int main(void)
   uint32_t current_tick = 0;
   uint32_t last_tick = 0;
   uint32_t set_tick_speed = 1000; //tick speed
+  uint8_t button_was_pressed = 0; //pagalbinis stebeti ar mygtukas buvo paspaustas
 
   RCC->AHB1ENR |= (1 << 6); // ijungiamas laikrodis
 
@@ -164,7 +172,6 @@ int main(void)
 
 	if (task==4){
 		uint8_t current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
-		current_tick = HAL_GetTick();
 		/* red LED (PG14) - flashes every 1 s */
 		if (current_tick - last_tick >= set_tick_speed)
 		{

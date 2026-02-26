@@ -320,3 +320,169 @@ arm-none-eabi-size  lab2.elf
    6276	     12	   1572	   7860	   1eb4	lab2.elf
 Finished building: default.size.stdout
  
+09:24:44 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab2.elf
+ 
+arm-none-eabi-size  lab2.elf 
+arm-none-eabi-objdump -h -S lab2.elf  > "lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6344	     12	   1572	   7928	   1ef8	lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab2.list
+ 
+09:25:08 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-size  lab2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6344	     12	   1572	   7928	   1ef8	lab2.elf
+Finished building: default.size.stdout
+ 
+09:42:41 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab2.elf
+ 
+arm-none-eabi-size  lab2.elf 
+arm-none-eabi-objdump -h -S lab2.elf  > "lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6464	     12	   1572	   8048	   1f70	lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab2.list
+ 
+09:42:47 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-size  lab2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6464	     12	   1572	   8048	   1f70	lab2.elf
+Finished building: default.size.stdout
+ 
+09:44:48 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab2.elf
+ 
+arm-none-eabi-size  lab2.elf 
+arm-none-eabi-objdump -h -S lab2.elf  > "lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6472	     12	   1572	   8056	   1f78	lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab2.list
+ 
+09:44:52 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-size  lab2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6472	     12	   1572	   8056	   1f78	lab2.elf
+Finished building: default.size.stdout
+ 
+09:46:45 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab2.elf
+ 
+arm-none-eabi-size  lab2.elf 
+arm-none-eabi-objdump -h -S lab2.elf  > "lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6476	     12	   1572	   8060	   1f7c	lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab2.list
+ 
+09:46:52 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-size  lab2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6476	     12	   1572	   8060	   1f7c	lab2.elf
+Finished building: default.size.stdout
+ 
+09:51:07 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:100:11: warning: unused variable 'button_was_pressed' [-Wunused-variable]
+  100 |   uint8_t button_was_pressed = 0; //pagalbinis stebeti ar mygtukas buvo paspaustas
+      |           ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab2.elf
+ 
+arm-none-eabi-size  lab2.elf 
+arm-none-eabi-objdump -h -S lab2.elf  > "lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6460	     12	   1572	   8044	   1f6c	lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab2.list
+ 
+09:51:11 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-size  lab2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6460	     12	   1572	   8044	   1f6c	lab2.elf
+Finished building: default.size.stdout
+ 
+09:52:18 **** Build of configuration Debug for project lab1 ****
+make -j12 all 
+arm-none-eabi-size  lab1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6488	     12	   1572	   8072	   1f88	lab1.elf
+Finished building: default.size.stdout
+ 
+09:52:27 **** Incremental Build of configuration Debug for project lab1 ****
+make -j12 all 
+arm-none-eabi-size  lab1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6488	     12	   1572	   8072	   1f88	lab1.elf
+Finished building: default.size.stdout
+ 
+10:00:23 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:107:11: warning: unused variable 'button_was_pressed' [-Wunused-variable]
+  107 |   uint8_t button_was_pressed = 0; //pagalbinis stebeti ar mygtukas buvo paspaustas
+      |           ^~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.0.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f4xx_it.o: in function `SysTick_Handler':
+C:/Users/Gintas/Documents/school/Microcontroller-uni/lab2/Debug/../Core/Src/stm32f4xx_it.c:184: multiple definition of `SysTick_Handler'; ./Core/Src/main.o:C:/Users/Gintas/Documents/school/Microcontroller-uni/lab2/Debug/../Core/Src/main.c:50: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: lab2.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+10:01:15 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+C:/ST/STM32CubeIDE_2.0.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/stm32f4xx_it.o: in function `SysTick_Handler':
+C:/Users/Gintas/Documents/school/Microcontroller-uni/lab2/Debug/../Core/Src/stm32f4xx_it.c:184: multiple definition of `SysTick_Handler'; ./Core/Src/main.o:C:/Users/Gintas/Documents/school/Microcontroller-uni/lab2/Debug/../Core/Src/main.c:50: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: lab2.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+10:02:14 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F429xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "lab2.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Gintas\Documents\school\Microcontroller-uni\lab2\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lab2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: lab2.elf
+ 
+arm-none-eabi-size  lab2.elf 
+arm-none-eabi-objdump -h -S lab2.elf  > "lab2.list"
+   text	   data	    bss	    dec	    hex	filename
+   6456	     12	   1572	   8040	   1f68	lab2.elf
+Finished building: default.size.stdout
+ 
+Finished building: lab2.list
+ 
+10:02:19 **** Incremental Build of configuration Debug for project lab2 ****
+make -j12 all 
+arm-none-eabi-size  lab2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6456	     12	   1572	   8040	   1f68	lab2.elf
+Finished building: default.size.stdout
+ 

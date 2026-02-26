@@ -42,7 +42,14 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+/* --- Globalūs kintamieji --- */
+volatile uint32_t my_ms_ticks = 0; // Mūsų nuosavas milisekundžių skaitiklis
 
+/* --- SysTick pertraukties funkcija --- */
+/* Ši funkcija iškviečiama automatiškai kas 1ms, nes ją sukonfigūruoja sistema paleidimo metu */
+void SysTick_Handler(void) {
+    my_ms_ticks++;
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -164,7 +171,7 @@ int main(void)
 
 	if (task==4){
 		uint8_t current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
-		current_tick = HAL_GetTick();
+		current_tick = my_ms_ticks;
 		/* red LED (PG14) - flashes every 1 s */
 		if (current_tick - last_tick >= set_tick_speed)
 		{

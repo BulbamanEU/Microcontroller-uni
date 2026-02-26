@@ -89,14 +89,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
   //GPIO_Init();
 
-  int task = 4;
+  int task = 3;
   uint32_t seconds = 0;
 
   uint8_t last_state = 0; // paskutine vartotojo mygtuko busena
-
-  uint32_t current_tick = 0;
-  uint32_t last_tick = 0;
-  uint32_t set_tick_speed = 1000; //tick speed
 
   RCC->AHB1ENR |= (1 << 6); // ijungiamas laikrodis
 
@@ -148,7 +144,7 @@ int main(void)
 	}
 
 	if (task == 3){
-		// Nuskaitome dabartinę PA0 būseną (1 - nuspaustas, 0 - ne)
+		// 1. Nuskaitome dabartinę PA0 būseną (1 - nuspaustas, 0 - ne)
 		// Naudojame bito kaukę (1 << 0) nuliui bitui
 		uint8_t current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
 
@@ -159,27 +155,7 @@ int main(void)
 
 		last_state = current_state;
 
-		HAL_Delay(20);
-	}
-
-	if (task==4){
-		uint8_t current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
-		current_tick = HAL_GetTick();
-		/* red LED (PG14) - flashes every 1 s */
-		if (current_tick - last_tick >= set_tick_speed)
-		{
-			GPIOG->ODR ^= (1 << 14);
-			last_tick = current_tick;
-		}
-
-		if (current_state == 1 && last_state == 0)
-		{
-			/* set green LED on */
-			GPIOG->ODR ^= (1<<13);
-			set_tick_speed = set_tick_speed + 1000;
-		}
-
-		last_state = current_state;
+		HAL_Delay(20)
 	}
   }
   /* USER CODE END 3 */
