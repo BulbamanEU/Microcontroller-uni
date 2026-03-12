@@ -89,6 +89,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   int task = 4;
 
+  uint32_t current_tick = 0;
   uint32_t last_tick_red = 0;
   uint32_t last_tick_green = 0;
   uint32_t set_tick_speed = 1000;
@@ -117,7 +118,7 @@ int main(void)
 
 	  /* red LED flashes in 1 s intervals, green LED flashes in 3 s intervals */
 	  if (task==2){
-		  uint32_t current_tick = HAL_GetTick();
+		  current_tick = HAL_GetTick();
 		  /* red LED (PG14) - flashes every 1 s */
 		  if (current_tick - last_tick_red >= 1000)
 		    {
@@ -145,34 +146,6 @@ int main(void)
 		          HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_RESET);
 		      }
 	  }
-
-	  /* updated with possibility to increase red LED intervals */
-	  if (task==4){
-
-		  uint32_t current_tick = HAL_GetTick();
-		  /* red LED (PG14) - flashes every 1 s */
-		  if (current_tick - last_tick_red >= set_tick_speed)
-		    {
-		      HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_14);
-		      last_tick_red = current_tick;
-		    }
-
-		  if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET)
-	  		{
-	  		  /* set green LED on */
-			  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_SET);
-			  if(button_was_pressed == 0){
-				  set_tick_speed = set_tick_speed + 500;
-				  button_was_pressed = 1; // uzrakinama galimybe keisti dazni
-			  }
-	  		}
-		  else
-	  		{
-	  		  HAL_GPIO_WritePin(GPIOG, GPIO_PIN_13, GPIO_PIN_RESET);
-	  		button_was_pressed = 0; // atrakinama galimybe keisti dazni
-	  		}
-	  }
-
 
     /* USER CODE END WHILE */
 

@@ -94,6 +94,7 @@ int main(void)
 
   uint8_t last_state = 0; // paskutine vartotojo mygtuko busena
 
+  uint8_t current_state = 0;
   uint32_t current_tick = 0;
   uint32_t last_tick = 0;
   uint32_t set_tick_speed = 1000; //tick speed
@@ -150,7 +151,7 @@ int main(void)
 	if (task == 3){
 		// Nuskaitome dabartinę PA0 būseną (1 - nuspaustas, 0 - ne)
 		// Naudojame bito kaukę (1 << 0) nuliui bitui
-		uint8_t current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
+		current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
 
 		//tikriname ar paspaustas mygtukas (toggle)
 		if (current_state == 1 && last_state == 0) {
@@ -163,7 +164,7 @@ int main(void)
 	}
 
 	if (task==4){
-		uint8_t current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
+		current_state = (GPIOA->IDR & (1 << 0)) ? 1 : 0;
 		current_tick = HAL_GetTick();
 		/* red LED (PG14) - flashes every 1 s */
 		if (current_tick - last_tick >= set_tick_speed)
