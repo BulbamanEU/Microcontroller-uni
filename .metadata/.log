@@ -1186,3 +1186,34 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Gintas\Docume
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-05-07 13:33:57.260
 !MESSAGE Indexed 'lab6_master_v1' (59 sources, 124 headers) in 6,04 sec: 12 729 declarations; 84 897 references; 6 unresolved inclusions; 138 syntax errors; 2 320 unresolved names (2,3 %)
+!SESSION 2026-05-07 19:38:37.615 -----------------------------------------------
+eclipse.buildId=Version 2.1.0
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-07 19:38:44.880
+!MESSAGE Log4j2 initialized with config file C:\Users\Gintas\Documents\school\Microcontroller-uni\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 19:38:55.256
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 19:38:55.257
+!MESSAGE port: 
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-07 19:38:56.259
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 19:40:56.171
+!MESSAGE Indexed 'lab6_master_v1' (65 sources, 133 headers) in 2,74 sec: 12 493 declarations; 83 077 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,0021 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 19:57:08.630
+!MESSAGE Indexed 'lab6_master_v1' (34 sources, 94 headers) in 1,43 sec: 7 688 declarations; 45 801 references; 0 unresolved inclusions; 1 syntax errors; 33 unresolved names (0,062 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 19:58:40.207
+!MESSAGE Indexed 'lab6_master' (39 sources, 145 headers) in 2,07 sec: 15 738 declarations; 75 802 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0,26 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 20:10:05.251
+!MESSAGE Indexed 'lab6_slave' (32 sources, 131 headers) in 1,94 sec: 13 717 declarations; 66 404 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0,3 %)
