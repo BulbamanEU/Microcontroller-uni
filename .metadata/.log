@@ -1097,3 +1097,92 @@ java.lang.IllegalStateException: RequestMonitor: RequestMonitor (org.eclipse.cdt
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+!ENTRY org.eclipse.core.jobs 4 2 2026-05-07 12:53:43.166
+!MESSAGE An internal error occurred during: "Execute Debug Command".
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: assertion failed: The application has not been initialized.
+	at org.eclipse.core.runtime.Assert.isTrue(Assert.java:119)
+	at org.eclipse.core.internal.runtime.InternalPlatform.assertInitialized(InternalPlatform.java:185)
+	at org.eclipse.core.internal.runtime.InternalPlatform.getAdapterManager(InternalPlatform.java:206)
+	at org.eclipse.core.runtime.Platform.getAdapterManager(Platform.java:661)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.getAdapter(GdbLaunch.java:454)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunch.disconnect(GdbLaunch.java:338)
+	at org.eclipse.debug.internal.core.commands.DisconnectCommand.execute(DisconnectCommand.java:35)
+	at org.eclipse.debug.internal.core.commands.ForEachCommand.doExecute(ForEachCommand.java:36)
+	at org.eclipse.debug.core.commands.AbstractDebugCommand$1.run(AbstractDebugCommand.java:215)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-05-07 12:53:43.490
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob RUNNING
+	 at java.base/java.lang.Object.wait0(Native Method)
+	 at java.base/java.lang.Object.wait(Object.java:366)
+	 at java.base/java.lang.Object.wait(Object.java:339)
+	 at org.eclipse.ui.console.IOConsoleInputStream.waitForData(IOConsoleInputStream.java:140)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:91)
+	 at org.eclipse.ui.console.IOConsoleInputStream.read(IOConsoleInputStream.java:113)
+	 at org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob.run(GdbBasicCliConsole.java:248)
+	 at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2026-05-07 12:57:40.741 -----------------------------------------------
+eclipse.buildId=Version 2.1.0
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\Gintas\Documents\school\Microcontroller-uni\lab6_master\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Gintas\Documents\school\Microcontroller-uni\lab6_master\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-07 12:57:47.181
+!MESSAGE Log4j2 initialized with config file C:\Users\Gintas\Documents\school\Microcontroller-uni\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-07 12:57:56.031
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 12:58:01.073
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 12:58:01.076
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 12:58:12.215
+!MESSAGE Indexed 'lab6_master' (21 sources, 118 headers) in 2,26 sec: 11 699 declarations; 51 305 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0,38 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 13:05:43.670
+!MESSAGE Indexed 'lab6_slave' (25 sources, 148 headers) in 3,08 sec: 13 643 declarations; 54 730 references; 5 unresolved inclusions; 121 syntax errors; 1 351 unresolved names (1,9 %)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 13:10:43.711
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM3
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 13:10:43.711
+!MESSAGE port: COM3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2026-05-07 13:11:58.680
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2026-05-07 13:12:02.061
+!MESSAGE Won't launch debug session since we failed to locate the binary.
+!SESSION 2026-05-07 13:31:59.936 -----------------------------------------------
+eclipse.buildId=Version 2.1.0
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  C:\Users\Gintas\Documents\school\Microcontroller-uni\lab6_master_v1\STM32CubeIDE\.project
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 C:\Users\Gintas\Documents\school\Microcontroller-uni\lab6_master_v1\STM32CubeIDE\.project
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2026-05-07 13:33:39.080
+!MESSAGE Log4j2 initialized with config file C:\Users\Gintas\Documents\school\Microcontroller-uni\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2026-05-07 13:33:50.821
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 13:33:53.667
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-07 13:33:53.668
+!MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-07 13:33:57.260
+!MESSAGE Indexed 'lab6_master_v1' (59 sources, 124 headers) in 6,04 sec: 12 729 declarations; 84 897 references; 6 unresolved inclusions; 138 syntax errors; 2 320 unresolved names (2,3 %)

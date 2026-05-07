@@ -11,3 +11,5 @@
 1778141584386	Delete resource 'lab5/Core/Utilities/Fonts'
 1778141604341	Delete resource 'lab5/Core/Src/stm32f4xx_hal_sdram.c'
 1778141606224	Delete resource 'lab5/Core/Src/stm32f4xx_ll_fmc.c'
+1778147894694	Delete resource 'lab5/Drivers/Components'
+1778147912888	Delete resource 'lab5/Core/Utilities'
