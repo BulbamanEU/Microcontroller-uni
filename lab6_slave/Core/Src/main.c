@@ -108,7 +108,16 @@ int main(void)
   MX_LTDC_Init();
   MX_SPI5_Init();
   /* USER CODE BEGIN 2 */
+  BSP_LCD_Init();
+  BSP_LCD_LayerDefaultInit(LCD_FOREGROUND_LAYER, LCD_FRAME_BUFFER);
+  BSP_LCD_SelectLayer(LCD_FOREGROUND_LAYER);
+  BSP_LCD_DisplayOn();
+  BSP_LCD_Clear(LCD_COLOR_WHITE);
+  BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+  BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
 
+  BSP_LCD_DisplayStringAtLine(1, (uint8_t*)"I2C3 SLAVE");
+  BSP_LCD_DisplayStringAtLine(3, (uint8_t*)"Waiting for data...");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -118,13 +127,21 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
 	  if (HAL_I2C_Slave_Receive(&hi2c3, &received_data, 1, HAL_MAX_DELAY) == HAL_OK)
-	      {
-	          // Kai gauname duomenis, parodome juos Slave ekrane, kad matytume, ar veikia
-	          sprintf(msg, "Received: 0x%02X", received_data);
-	          BSP_LCD_DisplayStringAtLine(5, (uint8_t*)msg);
-	      }
+	  {
+	      sprintf(msg, "Received: 0x%02X   ", received_data);
+	      BSP_LCD_DisplayStringAtLine(5, (uint8_t*)msg);
+          
+          BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+          BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: OK      ");
+          BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+	  }
+      else
+      {
+          BSP_LCD_SetTextColor(LCD_COLOR_RED);
+          BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: ERROR   ");
+          BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+      }
   }
   /* USER CODE END 3 */
 }

@@ -1,3 +1,0 @@
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/stm32f4xx_hal_timebase_tim.c:41:19:HAL_InitTick	64	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/stm32f4xx_hal_timebase_tim.c:120:6:HAL_SuspendTick	4	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/stm32f4xx_hal_timebase_tim.c:132:6:HAL_ResumeTick	4	static

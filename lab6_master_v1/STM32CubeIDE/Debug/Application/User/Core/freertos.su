@@ -1,6 +1,0 @@
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/freertos.c:71:13:vApplicationIdleHook	4	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/freertos.c:86:13:vApplicationStackOverflowHook	16	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/freertos.c:95:13:vApplicationMallocFailedHook	4	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/freertos.c:114:6:vApplicationGetIdleTaskMemory	24	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/freertos.c:128:6:MX_FREERTOS_Init	48	static
-C:/Users/Gintas/Documents/school/Microcontroller-uni/lab6_master_v1/Core/Src/freertos.c:167:6:StartDefaultTask	16	static
