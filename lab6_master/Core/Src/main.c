@@ -55,7 +55,7 @@ SDRAM_HandleTypeDef hsdram1;
 uint8_t i2c_data[] = {0x10, 0x20, 0x30, 0x40};
 uint8_t current_idx = 0;
 uint32_t transfer_count = 0;
-uint16_t slave_addr = 0x3C << 1; // HAL naudoja 8-bitų adresą (pastumiamą per 1)
+uint16_t slave_addr = 0x3C << 1; 
 char msg[30];
 /* USER CODE END PV */
 
@@ -120,7 +120,7 @@ int main(void)
   BSP_LCD_SetBackColor(LCD_COLOR_WHITE);
   BSP_LCD_SetFont(&Font16);
 
-  BSP_LCD_DisplayStringAtLine(1, (uint8_t*)"I2C3 MASTER");
+  BSP_LCD_DisplayStringAtLine(1, (uint8_t*)"I2C3 MASTER (MAIN)");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -130,30 +130,27 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  if (HAL_I2C_Master_Transmit(&hi2c3, slave_addr, &i2c_data[current_idx], 1, 100) == HAL_OK)
-	  {
-	      transfer_count++;
+    if (HAL_I2C_Master_Transmit(&hi2c3, slave_addr, &i2c_data[current_idx], 1, 100) == HAL_OK)
+    {
+        transfer_count++;
+        sprintf(msg, "Sent: 0x%02X     ", i2c_data[current_idx]);
+        BSP_LCD_DisplayStringAtLine(4, (uint8_t*)msg);
+        sprintf(msg, "Count: %lu      ", transfer_count);
+        BSP_LCD_DisplayStringAtLine(5, (uint8_t*)msg);
+        
+        BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
+        BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: OK      ");
+        BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+    }
+    else
+    {
+        BSP_LCD_SetTextColor(LCD_COLOR_RED);
+        BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: ERROR   ");
+        BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
+    }
 
-	      sprintf(msg, "Sent: 0x%02X     ", i2c_data[current_idx]);
-	      BSP_LCD_DisplayStringAtLine(4, (uint8_t*)msg);
-
-	      sprintf(msg, "Count: %lu      ", transfer_count);
-	      BSP_LCD_DisplayStringAtLine(5, (uint8_t*)msg);
-          
-          BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-          BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: OK      ");
-          BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-	  }
-      else
-      {
-          BSP_LCD_SetTextColor(LCD_COLOR_RED);
-          BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: ERROR   ");
-          BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
-      }
-
-	  current_idx = (current_idx + 1) % 4;
-
-	  HAL_Delay(1000);
+    current_idx = (current_idx + 1) % 4;
+    HAL_Delay(1000);
   }
   /* USER CODE END 3 */
 }

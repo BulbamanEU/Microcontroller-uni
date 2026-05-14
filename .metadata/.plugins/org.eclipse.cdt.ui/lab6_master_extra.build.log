@@ -1,0 +1,10 @@
+11:15:44 **** Incremental Build of configuration Debug for project lab6_master_extra ****
+make -j12 all 
+arm-none-eabi-size  lab6_master_extra.elf 
+   text	   data	    bss	    dec	    hex	filename
+  37980	    180	   2996	  41156	   a0c4	lab6_master_extra.elf
+Finished building: default.size.stdout
+ 
+
+11:15:45 Build Finished. 0 errors, 0 warnings. (took 1s.56ms)
+

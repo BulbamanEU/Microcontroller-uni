@@ -1,10 +1,11 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab3 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab4_pap Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab5 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master_v1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_slave Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master
+configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_slave Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab1 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab2 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab3 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab4 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab4_pap Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab5 Debug,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_slave_extra,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master_extra,org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master_extra Debug
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab1\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab1\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab4_pap\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab5\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master_extra\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:lab6_master_v1\ Debug/activeLaunchMode=run
