@@ -120,6 +120,8 @@ int main(void)
   BSP_LCD_SetFont(&Font16);
 
   BSP_LCD_DisplayStringAtLine(1, (uint8_t*)"I2C3 MASTER (EXTRA)");
+  sprintf(msg, "Addr: 0x%02X (0x%02X<<1)", (unsigned int)(slave_addr >> 1), (unsigned int)(slave_addr >> 1));
+  BSP_LCD_DisplayStringAtLine(2, (uint8_t*)msg);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -132,19 +134,19 @@ int main(void)
     if (HAL_I2C_Master_Transmit(&hi2c3, slave_addr, i2c_data, 3, 100) == HAL_OK)
     {
         transfer_count++;
-        sprintf(msg, "Seq: 44 55 66   ");
+        sprintf(msg, "Seq: %02X %02X %02X      ", i2c_data[0], i2c_data[1], i2c_data[2]);
         BSP_LCD_DisplayStringAtLine(4, (uint8_t*)msg);
-        sprintf(msg, "Seq Num: %lu    ", transfer_count);
+        sprintf(msg, "Seq Num: %lu         ", transfer_count);
         BSP_LCD_DisplayStringAtLine(5, (uint8_t*)msg);
-        
+
         BSP_LCD_SetTextColor(LCD_COLOR_GREEN);
-        BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: OK      ");
+        BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: OK         ");
         BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
     }
     else
     {
         BSP_LCD_SetTextColor(LCD_COLOR_RED);
-        BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: ERROR   ");
+        BSP_LCD_DisplayStringAtLine(7, (uint8_t*)"Status: ERROR      ");
         BSP_LCD_SetTextColor(LCD_COLOR_BLACK);
     }
 
