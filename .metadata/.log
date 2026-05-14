@@ -2829,3 +2829,35 @@ COM6
 
 !ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 11:56:45.976
 !MESSAGE port: 
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-14 12:18:23.001
+!MESSAGE Indexed 'lab7' (53 sources, 182 headers) in 6,5 sec: 19 141 declarations; 86 410 references; 1 unresolved inclusions; 92 syntax errors; 240 unresolved names (0,23 %)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 12:18:56.383
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM8
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 12:18:56.384
+!MESSAGE port: COM8
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 12:27:29.408
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 12:27:29.410
+!MESSAGE port: 
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 12:38:23.765
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+COM8
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 12:38:23.765
+!MESSAGE port: COM8
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-14 12:44:22.750
+!MESSAGE Indexed 'lab7_extra' (50 sources, 182 headers) in 6,85 sec: 19 048 declarations; 83 629 references; 1 unresolved inclusions; 92 syntax errors; 269 unresolved names (0,26 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-05-14 13:07:50.753
+!MESSAGE Indexed 'lab5_extra' (40 sources, 140 headers) in 4,8 sec: 14 938 declarations; 69 529 references; 1 unresolved inclusions; 92 syntax errors; 266 unresolved names (0,31 %)
