@@ -2861,3 +2861,10 @@ COM8
 
 !ENTRY org.eclipse.cdt.core 1 0 2026-05-14 13:07:50.753
 !MESSAGE Indexed 'lab5_extra' (40 sources, 140 headers) in 4,8 sec: 14 938 declarations; 69 529 references; 1 unresolved inclusions; 92 syntax errors; 266 unresolved names (0,31 %)
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 13:55:17.366
+!MESSAGE Executed PowerShell command powershell.exe -Command "Get-CimInstance -ClassName Win32_SerialPort | Select-Object -ExpandProperty DeviceID":
+
+
+!ENTRY com.st.stm32cube.ide.mpu.remote.serial 1 1 2026-05-14 13:55:17.368
+!MESSAGE port: 
